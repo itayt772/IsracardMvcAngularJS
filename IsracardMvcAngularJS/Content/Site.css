@@ -1,24 +1,48 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.mainContent {
+    margin-top: 60px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.repository-search-container .mainTitle {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.repository-search-container .messages-container {
+    text-align: center;
+    margin: 10px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.repository-box {
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0px;
+    box-shadow: 1px 1px 3px black;
+    text-align: center;
 }
+
+    .repository-box .title {
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 5px;
+        width: 85%;
+        margin-left: 5%;
+    }
+
+    .repository-box .img-box img {
+        width: 60%;
+    }
+
+    .repository-box .bookmark-btn {
+        font-size: 22px;
+        position: absolute;
+        top: 23px;
+        right: 26px;
+        cursor: pointer;
+    }
+
+        .repository-box .bookmark-btn.active {
+            color: #f3c41b;
+        }

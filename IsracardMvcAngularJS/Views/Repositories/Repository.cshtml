@@ -1,0 +1,11 @@
+﻿<div class="repository-box">
+    <i title="bookmark" class="bookmark-btn glyphicon glyphicon-bookmark"
+       ng-click="toggleBookmark(repository)"
+       ng-class="{'active': isRepoBookmarked(repository)}"></i>
+    <div class="title">
+        {{repository.full_name}}
+    </div>
+    <div class="img-box">
+        <img ng-src="{{repository.owner.avatar_url}}" />
+    </div>
+</div>

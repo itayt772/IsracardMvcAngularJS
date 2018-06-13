@@ -1,0 +1,14 @@
+﻿<div class="bookmarked-repos-container">
+    <div class="mainTitle">
+        <h2>{{models.title}}</h2>
+    </div>
+
+    <div class="col-md-12">
+        <div class="messages-container" ng-if="repositories.length === 0">
+            No bookmarked repositories.
+        </div>
+        <div class="col-md-4" ng-repeat="repository in models.repositories">
+            <single-repository repository="repository"></single-repository>
+        </div>
+    </div>
+</div>

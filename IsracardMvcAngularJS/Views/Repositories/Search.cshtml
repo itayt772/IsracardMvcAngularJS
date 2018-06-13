@@ -1,0 +1,30 @@
+﻿<div class="repository-search-container">
+    <div class="mainTitle">
+        <h2>{{models.title}}</h2>
+    </div>
+
+    <div class="col-md-12">
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Repository" ng-model="models.repositorySearchVal" on-enter="searchRepositories(models.repositorySearchVal)">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="searchRepositories(models.repositorySearchVal)">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-12">
+        <div class="messages-container" ng-if="shouldDisplayNoResults()">
+            No results, please type repositry search key
+        </div>
+        <div class="messages-container" ng-if="shouldDisplayLoadingResults()">
+            Loading results, please wait...
+        </div>
+        <div class="col-md-4" ng-repeat="repository in models.repositoriesResults">
+            <single-repository repository="repository"></single-repository>
+        </div>
+    </div>
+</div>
